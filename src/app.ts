@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
+import router from './router/router'
 
 const app: Application = express()
 
@@ -11,5 +12,7 @@ app.get('/', (req: Request, res: Response) => {
     .status(200)
     .send({ success: true, message: 'BD Tour Server is Running' })
 })
+
+app.use('/api/v1', router)
 
 export default app
