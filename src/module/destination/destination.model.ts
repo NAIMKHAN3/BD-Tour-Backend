@@ -6,6 +6,14 @@ const destinationSchema = new Schema<IDestination>({
         type: String,
         required: true
     },
+    image: {
+        type: String,
+        required: true
+    },
+    video: {
+        type: String,
+        required: true
+    },
 }, {timestamps: true})
 
 export const Destination = model<IDestination>('Destination', destinationSchema);
