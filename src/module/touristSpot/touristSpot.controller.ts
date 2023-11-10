@@ -28,3 +28,16 @@ export const getTouristSpot = async (req: Request, res: Response, next: NextFunc
         next(err)
     }
 }
+export const getAllTouristSpot = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const result = await TouristSpot.find({}).populate('destinationId');
+        res.status(200).send({
+            status: true,
+            message: "Tourist Spot Get Success",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}

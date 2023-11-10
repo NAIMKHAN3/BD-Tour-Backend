@@ -8,6 +8,7 @@ export interface IBooking {
     destinationId: Types.ObjectId;
     userId: Types.ObjectId;
     date: string;
+    status: "Pending" | "Approved" | "Rejected";
     createdAt?:string;
     updated?:string;
 }
