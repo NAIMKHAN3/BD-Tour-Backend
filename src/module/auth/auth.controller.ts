@@ -66,7 +66,7 @@ export const loginUser = async (req: Request, res: Response, next: NextFunction)
         });
 
         res.status(200).send({
-            success: true,
+            status: true,
             statusCode: 200,
             message: "User Login Success",
             data: user,
